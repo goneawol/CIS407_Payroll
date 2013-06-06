@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+<%--    Additional div tag added for navigation--%>
+    <div id = "top" align="center">
+        <asp:ImageButton ID="ImageButton1" runat="server" 
+            ImageUrl="~/Images/CoolBiz_Productions_logo.JPG" PostBackUrl="~/Default.aspx" />
+        <br />
+        <asp:LinkButton ID="lbSalCalc" runat="server" 
+            PostBackUrl="~/frmSalaryCalculator.aspx">Salary Calculator</asp:LinkButton>
+&nbsp;|
+        <asp:LinkButton ID="lbAddPersonnel" runat="server" 
+            PostBackUrl="~/frmPersonnel.aspx">Add Personnel</asp:LinkButton>
+&nbsp;|
+        <asp:LinkButton ID="lbUserActivity" runat="server" 
+            PostBackUrl="~/frmUserActivity.aspx">User Activity</asp:LinkButton>
+&nbsp;|
+        <asp:LinkButton ID="lbViewPersonnel" runat="server" 
+            PostBackUrl="~/frmViewPersonnel.aspx">View Personnel</asp:LinkButton>
+&nbsp;|
+        <asp:LinkButton ID="lbSearchPersonnel" runat="server" 
+            PostBackUrl="~/frmSearchPersonnel.aspx">Search Personnel</asp:LinkButton>
+&nbsp;|&nbsp;
+        <asp:LinkButton ID="lbEditEmployees" runat="server" 
+            PostBackUrl="~/frmEditPersonnel.aspx">Edit Employees</asp:LinkButton>
+        &nbsp;|
+        <asp:LinkButton ID="lbManageUsers" runat="server" 
+            PostBackUrl="~/frmManageUsers.aspx">Manage Users</asp:LinkButton>
+    </div>
+    
+<%--    This is the default code: --%>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

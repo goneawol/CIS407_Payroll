@@ -1,0 +1,4 @@
+﻿#top a
+{ text-decoration: none; color: #990066; }
+#top a:hover { color: #ff6600; }
+#top {padding-bottom: 20px; }
